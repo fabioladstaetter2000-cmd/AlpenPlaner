@@ -111,7 +111,7 @@ form.addEventListener('submit', async (e)=>{
   output.innerHTML = "AI generiert deinen Wanderplan… ⏳";
 
   try {
-    const res = await fetch('/.netlify/functions/generateHike', {
+    const res = await fetch('https://alpenplaner.netlify.app/.netlify/functions/generateHike', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({bundesland,dauer,schwierigkeit})
